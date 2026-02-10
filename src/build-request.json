@@ -1,0 +1,66 @@
+{
+  "kind": "build_request",
+  "title": "Make the app use a dark theme by default",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "text": "Update the application so the UI is presented in a dark theme by default (including signed-in pages and signed-out landing), using the existing Tailwind CSS variable-based theme system and the existing ThemeProvider setup.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Aisa dark theme me bana do"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On first load in a fresh browser session, the app renders in dark mode without requiring the user to change OS/system theme settings.",
+        "The dark theme applies consistently across the authenticated shell (header/footer/layout), dashboard, project editor, and dialogs.",
+        "No user-facing text is changed to non-English as part of this update."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Ensure the public project page (/p/$projectId) renders correctly in dark mode and remains consistent with the app’s non-blue/non-purple primary visual direction by updating its theme styling to align with the existing design tokens (bg-background/text-foreground, card/muted/primary) rather than hardcoded gray/purple classes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Aisa dark theme me bana do"
+        ]
+      },
+      "acceptanceCriteria": [
+        "When a published project uses the 'dark' theme, the public page has correct contrast for text, links, and prose content.",
+        "The public page does not use a purple/pink-based 'custom' background styling; it follows the app’s established palette direction.",
+        "Links and markdown-rendered content remain readable and visually consistent with the rest of the app theme tokens."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit any files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or any sources under frontend/src/components/ui (compose them instead).",
+    "Keep backend architecture as a single Motoko actor; no backend changes are required for this request."
+  ],
+  "nonGoals": [
+    "Adding new authentication providers (only Internet Identity is supported).",
+    "Building a new theming system from scratch (use the existing Tailwind CSS variables and ThemeProvider).",
+    "Changing project data models or introducing migrations."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

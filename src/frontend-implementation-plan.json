@@ -1,0 +1,49 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Default dark theme + token-aligned public project styling",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "summary": "Make dark mode the default app theme using existing Tailwind CSS variables and ThemeProvider, ensuring consistency across signed-in and signed-out UI.",
+      "acceptanceCriteria": [
+        "On first load in a fresh browser session, the app renders in dark mode without requiring the user to change OS/system theme settings.",
+        "The dark theme applies consistently across the authenticated shell (header/footer/layout), dashboard, project editor, and dialogs.",
+        "No user-facing text is changed to non-English as part of this update."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Update the existing next-themes ThemeProvider configuration so the app defaults to dark mode on first load (do not rely on system theme), while keeping the existing ThemeProvider setup intact."
+        },
+        {
+          "path": "frontend/src/pages/SignedOut.tsx",
+          "operation": "modify",
+          "description": "Align the signed-out landing page background and accents with the variable-based design tokens (bg-background/text-foreground, card/muted/primary) so it renders correctly and consistently under the default dark theme (no user-facing text changes)."
+        },
+        {
+          "path": "frontend/src/components/editor/ProjectPreview.tsx",
+          "operation": "modify",
+          "description": "Replace hardcoded light/dark/custom background/text classes with token-based styling and theme-appropriate typography (e.g., readable prose in dark mode) to keep previews consistent with the app’s Tailwind CSS variable theme system and default dark mode."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Refactor the public project page to use design tokens (no hardcoded gray/purple) and render readable markdown in dark mode consistent with the app palette direction.",
+      "acceptanceCriteria": [
+        "When a published project uses the 'dark' theme, the public page has correct contrast for text, links, and prose content.",
+        "The public page does not use a purple/pink-based 'custom' background styling; it follows the app’s established palette direction.",
+        "Links and markdown-rendered content remain readable and visually consistent with the rest of the app theme tokens."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PublicProject.tsx",
+          "operation": "modify",
+          "description": "Remove hardcoded themeClasses (gray backgrounds and purple/pink custom gradient) and restyle the page using existing Tailwind theme tokens (bg-background/text-foreground, card/muted/primary). Ensure markdown/prose and links render with appropriate contrast in dark mode and stay aligned with the app’s non-blue/non-purple palette direction."
+        }
+      ]
+    }
+  ]
+}

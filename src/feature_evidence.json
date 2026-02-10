@@ -1,0 +1,45 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-application-so-the-ui-is-presented-in-a-dark-theme-by-default-including-signed-in-pages-and-signed-out-landing-using-the-existing-tailwind-css-variable-based-theme-system-and-the-existing-themeprovider-setup",
+      "featureTitle": "Update the application so the UI is presented in a dark theme by default (including signed-in pages and signed-out landing), using the existing Tailwind CSS variable-based theme system and the existing ThemeProvider setup.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/editor/ProjectPreview.tsx",
+        "frontend/src/pages/SignedOut.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-public-project-page-p-projectid-renders-correctly-in-dark-mode-and-remains-consistent-with-the-app-s-non-blue-non-purple-primary-visual-direction-by-updating-its-theme-styling-to-align-with-the-existing-design-tokens-bg-background-text-foreground-card-muted-primary-rather-than-hardcoded-gray-purple-classes",
+      "featureTitle": "Ensure the public project page (/p/$projectId) renders correctly in dark mode and remains consistent with the app’s non-blue/non-purple primary visual direction by updating its theme styling to align with the existing design tokens (bg-background/text-foreground, card/muted/primary) rather than hardcoded gray/purple classes.",
+      "files": [
+        "frontend/src/pages/PublicProject.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

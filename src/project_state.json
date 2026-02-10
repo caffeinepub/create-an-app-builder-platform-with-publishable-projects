@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Project to create a tool/platform that can build apps and also publish them.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-implement-internet-identity-sign-in-and-a-basic-authenticated-app-shell-so-users-can-access-the-builder-after-logging-in",
+      "title": "Implement Internet Identity sign-in and a basic authenticated app shell so users can access the builder after logging in.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-projects-dashboard-ui-that-lets-users-view-a-list-of-their-projects-create-a-new-project-rename-edit-a-project-and-delete-a-project",
+      "title": "Build a Projects Dashboard UI that lets users: view a list of their projects, create a new project, rename/edit a project, and delete a project.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-simple-in-browser-app-building-editor-for-each-project-that-supports-editing-a-small-publishable-site-with-at-minimum-a-home-page-title-tagline-and-body-content-markdown-or-rich-text-plus-a-theme-selection-e-g-2-3-preset-themes-save-changes-to-the-backend",
+      "title": "Implement a simple in-browser 'app building' editor for each project that supports editing a small publishable site with at minimum: a Home page title, tagline, and body content (markdown or rich text), plus a theme selection (e.g., 2–3 preset themes). Save changes to the backend.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-preview-mode-for-a-project-that-renders-the-current-project-content-as-a-visitor-would-see-it",
+      "title": "Add a Preview mode for a project that renders the current project content as a visitor would see it.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-publish-feature-users-can-publish-unpublish-a-project-when-published-the-project-must-have-a-stable-public-url-inside-this-app-e-g-p-projectid-or-similar-that-can-be-viewed-without-signing-in",
+      "title": "Implement a 'Publish' feature: users can publish/unpublish a project. When published, the project must have a stable public URL inside this app (e.g., /p/<projectId> or similar) that can be viewed without signing in.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-share-section-for-published-projects-that-displays-the-public-url-and-provides-a-one-click-copy-to-clipboard-action",
+      "title": "Add a 'Share' section for published projects that displays the public URL and provides a one-click copy-to-clipboard action.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-distinctive-visual-theme-across-the-app-layout-typography-spacing-and-color-system-appropriate-for-an-app-builder-product-do-not-use-blue-purple-as-the-primary-palette",
+      "title": "Apply a coherent, distinctive visual theme across the app (layout, typography, spacing, and color system) appropriate for an 'app builder' product. Do not use blue/purple as the primary palette.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-application-so-the-ui-is-presented-in-a-dark-theme-by-default-including-signed-in-pages-and-signed-out-landing-using-the-existing-tailwind-css-variable-based-theme-system-and-the-existing-themeprovider-setup",
+      "title": "Update the application so the UI is presented in a dark theme by default (including signed-in pages and signed-out landing), using the existing Tailwind CSS variable-based theme system and the existing ThemeProvider setup.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-public-project-page-p-projectid-renders-correctly-in-dark-mode-and-remains-consistent-with-the-app-s-non-blue-non-purple-primary-visual-direction-by-updating-its-theme-styling-to-align-with-the-existing-design-tokens-bg-background-text-foreground-card-muted-primary-rather-than-hardcoded-gray-purple-classes",
+      "title": "Ensure the public project page (/p/$projectId) renders correctly in dark mode and remains consistent with the app’s non-blue/non-purple primary visual direction by updating its theme styling to align with the existing design tokens (bg-background/text-foreground, card/muted/primary) rather than hardcoded gray/purple classes.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a platform that enables users to build apps and publish them",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add backend data models and APIs to create, read, update, and delete user projects for an 'app builder' workflow. Each project must be owned by the authenticated principal and include at minimum: projectId, owner, name, description (optional), createdAt, updatedAt, and publishStatus (draft/published).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add a dark theme (UI styling) option for the app builder platform.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Create an app builder platform with publishable projects",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

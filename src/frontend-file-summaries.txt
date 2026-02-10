@@ -1,0 +1,19 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, authentication flow, and ThemeProvider configured to default to dark mode without system theme detection.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including user profiles, project CRUD, project state management, and publish/unpublish functionality with proper cache invalidation.",
+  "frontend/src/components/auth/LoginButton.tsx": "Reusable login/logout button component using Internet Identity with loading states and proper cache clearing on logout.",
+  "frontend/src/components/auth/ProfileSetupModal.tsx": "Modal dialog for first-time user profile setup that prompts for display name and prevents dismissal until completed.",
+  "frontend/src/components/layout/AppLayout.tsx": "Shared application layout with header containing branding, user name display, login button, and footer with attribution.",
+  "frontend/src/pages/SignedOut.tsx": "Landing page for unauthenticated users featuring hero image, product branding, and feature highlights using design tokens (bg-background, text-foreground, card, primary) for consistent dark mode rendering.",
+  "frontend/src/pages/Dashboard.tsx": "Authenticated dashboard displaying user's projects with create/edit/delete functionality and empty state handling.",
+  "frontend/src/components/projects/ProjectList.tsx": "Grid layout of project cards with status badges, dropdown menus for actions, and navigation to editor and public views with updated Tailwind v3 classes.",
+  "frontend/src/components/projects/ProjectDialogs.tsx": "Dialog components for creating, editing, and deleting projects with form validation and loading states.",
+  "frontend/src/pages/ProjectEditor.tsx": "Project editor page with tabs for edit/preview modes, save functionality, publish/unpublish controls, and dirty state tracking.",
+  "frontend/src/components/editor/EditorForm.tsx": "Form component for editing project content including title, tagline, body (markdown), and theme selection.",
+  "frontend/src/components/editor/ThemePicker.tsx": "Radio group component for selecting project theme (light, dark, custom) with visual cards and icons.",
+  "frontend/src/components/editor/ProjectPreview.tsx": "Preview component that renders project content with theme-aware styling using appropriate prose classes for dark mode readability and token-based backgrounds.",
+  "frontend/src/components/projects/ShareSection.tsx": "Component displaying public URL for published projects with copy-to-clipboard functionality, confirmation feedback, and updated Tailwind v3 classes.",
+  "frontend/src/pages/PublicProject.tsx": "Public-facing project page that renders published content with theme-aware styling using design tokens and proper prose classes for dark mode contrast and readability.",
+  "frontend/src/index.css": "Global styles with OKLCH color system using warm amber/orange primary palette for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom font families (Inter, Poppins) and extended theme tokens matching the amber/orange color scheme."
+}
